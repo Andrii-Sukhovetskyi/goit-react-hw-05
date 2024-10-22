@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+  color: blue;
+}

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
+import toast from "react-hot-toast";
+
 import { getMovieCastById } from "../../services/api";
 import Loader from "../Loader/Loader";
-import toast from "react-hot-toast";
 
 const MovieCast = () => {
   const [cast, setCast] = useState([]);

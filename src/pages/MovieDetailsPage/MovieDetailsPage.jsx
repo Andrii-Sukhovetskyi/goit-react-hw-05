@@ -1,12 +1,7 @@
 import { Suspense, useEffect, useRef, useState } from "react";
+import { Link, NavLink, Outlet, useLocation, useParams, } from "react-router-dom";
 import toast from "react-hot-toast";
-import {
-  Link,
-  NavLink,
-  Outlet,
-  useLocation,
-  useParams,
-} from "react-router-dom";
+
 import { getMovieDetailsById } from "../../services/api";
 import Loader from "../../components/Loader/Loader";
 import s from "./MovieDetailsPage.module.css";
@@ -37,7 +32,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <Link to={goBackRef.current ?? "/movies"}>Go back</Link>
+      <Link className={s.detailsBtn} to={goBackRef.current ?? "/movies"}>Go back</Link>
       <div className={s.movieInfo}>
         <img
           src={

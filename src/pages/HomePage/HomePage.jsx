@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import MovieList from "../../components/MovieList/MovieList";
 import { getTrendingMovies } from "../../services/api";
 import toast, { Toaster } from "react-hot-toast";

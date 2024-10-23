@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useOutletContext } from "react-router-dom";
+
 import { getMovieReviewsById } from "../../services/api";
 import Loader from "../Loader/Loader";
 

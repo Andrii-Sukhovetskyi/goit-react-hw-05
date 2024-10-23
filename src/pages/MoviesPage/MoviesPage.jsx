@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { useSearchParams } from "react-router-dom";
+
 import MovieList from "../../components/MovieList/MovieList";
 import { getMoviesBySearchQuery } from "../../services/api";
-import toast, { Toaster } from "react-hot-toast";
 import Loader from "../../components/Loader/Loader";
-import { useSearchParams } from "react-router-dom";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
@@ -56,7 +57,7 @@ const MoviesPage = () => {
       <form onSubmit={handleSubmit}>
         <input type="text" name="search" />
         <button type="submit" disabled={loading}>
-          {loading ? "Searching..." : "Search"}
+          Search
         </button>
       </form>
 
